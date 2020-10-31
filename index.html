@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" href="#" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div id="start" class="class1 class2">
+      <div class="jumbotron">
+        <h1 class="display-4">Hangman Game</h1>
+      </div>
+      <p class="lead">
+        <button
+          type="button"
+          class="btn btn-primary"
+          id="game-reset"
+          onclick="startGame()"
+        >
+          Play Game
+        </button>
+      </p>
+    </div>
+
+    <div id="game-container" class="hide class1 class2">
+      <div id="letter"></div>
+      <div id="game">
+        <div class="player">
+          <div class="stang" data="false" id="g0">
+            <h1 class="display-3">H</h1>
+          </div>
+          <div class="stang2" data="false" id="g1">
+            <h1 class="display-3">A</h1>
+          </div>
+          <div class="stang3" data="false" id="g2">
+            <h1 class="display-3">N</h1>
+          </div>
+          <div class="stang4" data="false" id="g3">
+            <h1 class="display-3">G</h1>
+          </div>
+          <div class="stang5" data="false" id="g4">
+            <h1 class="display-3">M</h1>
+          </div>
+          <div class="stang6" data="false" id="g5">
+            <h1 class="display-3">A</h1>
+          </div>
+          <div class="stang7" data="false" id="g6">
+            <h1 class="display-3">N</h1>
+          </div>
+          <div class="hintButton" data="false" id="hintButton" onclick="hint()">
+            ?
+          </div>
+        </div>
+        <div id="tastatur">
+          <div id="moveKeybord"><div class="marg"></div></div>
+          <div id="keybord"></div>
+        </div>
+        <div class="hint" id="hint">
+          <div class="title">
+            Hint
+            <div class="exit" onclick="hintExit()">X</div>
+          </div>
+          <div class="body" id="hintText"></div>
+        </div>
+      </div>
+    </div>
+    <div id="result" class="hide class1 class2">
+      <div class="title" id="rT"></div>
+      <div class="body" id="rM"></div>
+      <button
+        type="button"
+        class="btn btn-primary"
+        id="game-reset"
+        onclick="resetGame()"
+      >
+        Reset Game
+      </button>
+    </div>
+    <script src="index.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
